@@ -41,6 +41,8 @@ function start() { // Inicio da função start()
 	movefundo();
 	movejogador();
 	moveinimigo1();
+	moveinimigo2();
+	moveamigo();
 
 	} // Fim da função loop()
 
@@ -48,7 +50,7 @@ function start() { // Inicio da função start()
 	
 	function movefundo() {
 		esquerda = parseInt($("#fundoGame").css("background-position"));
-		$("#fundoGame").css("background-position",esquerda-2);
+		$("#fundoGame").css("background-position",esquerda-3);
 	} // fim da função movefundo()
 	
 	function movejogador() {
@@ -95,6 +97,29 @@ function start() { // Inicio da função start()
 				}
 		} //Fim da função moveinimigo1()
 		
-		
+	function moveinimigo2() {
+			posicaoX = parseInt($("#inimigo2").css("left"));
+		$("#inimigo2").css("left",posicaoX-4);
+					
+			if (posicaoX<=0) {
+				
+			$("#inimigo2").css("left",775);
+						
+			}
+	} // Fim da função moveinimigo2()
+	
+	
+	function moveamigo() {
+	
+		posicaoX = parseInt($("#amigo").css("left"));
+		$("#amigo").css("left",posicaoX+1);
+					
+			if (posicaoX>906) {
+				
+			$("#amigo").css("left",0);
+		}
+
+	}
+
 } //Fim da função start
 
