@@ -25,7 +25,7 @@ function start() { // Inicio da função start()
 	
 	function movefundo() {
 		esquerda = parseInt($("#fundoGame").css("background-position"));
-		$("#fundoGame").css("background-position",esquerda-1);
+		$("#fundoGame").css("background-position",esquerda-2);
 		
 		} // fim da função movefundo()
 	
